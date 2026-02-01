@@ -1,0 +1,22 @@
+What We Require:
+BS in Computer Science, Computer Engineering, or a related discipline.
+At least 4 years of proven experience as a full-stack software engineer, with expertise in front-end and back-end development.
+Current or recent U.S. Government Security clearance at the Secret level or higher.
+Strong proficiency in TypeScript and JavaScript.
+Production experience with frameworks such as Vue, React, Solid, or Angular.
+Strong understanding of asynchronous programming models (promises, callbacks, etc.)
+Experience with server-side technologies (e.g., Java, Node.js, or Python).
+Experience with containerization and virtualization.
+Experience maintaining CI/CD pipelines in GitLab or similar.
+Experience with modern version control software git.
+Strong technical communication skills and attention to detail are a must.
+This position requires the ability to obtain and maintain a security clearance, which is issued by the U.S. Government. Security clearances may only be granted to U.S. citizens. In addition, applicants who accept a conditional offer of employment may be subject to government security investigation(s) and must meet eligibility requirements for access to classified information.
+
+What We Value:
+Experience working with databases: PostgreSQL, MySQL, and NoSQL.
+Strong understanding of software architecture best practices such as modularization, generalization and component-based.
+Understanding of application development issues at enterprise level.
+Ability to analyze high level customer requirements to build low level functional requirements.
+Develop and sustain new and existing applications including software refactoring.
+Self-learner with an interest in innovation and learning new technologies and design skills.
+Familiarity with emerging trends in web, desktop, and/or mobile app development.
