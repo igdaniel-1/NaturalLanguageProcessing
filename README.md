@@ -1,4 +1,7 @@
 # Text Analysis Program
-There are numerous applications of this program including resume anazlysis, job descipriton matching, and general word frequency analysis.
+A light-weight NLP program to anazlyse the content of a job description and reurn top key words to include on your resume.
+
+There are numerous applications of this program including resume analysis, job description matching, and general word frequency analysis.
 
 ## Instructions
+'textAnalysis/textInputReader.py'

@@ -11,6 +11,9 @@ with open('textAnalysis/textInput.txt','r') as file:
 # they could be tools from your resume you're looking for in a job listing 
 # anazlyze the text tfor these words and return their data on top of the other words
 # i can also make a 'lite' mode that only anazlyses the frequency of the targetWords and 'ignores' the rest of the text
+
+# I could also make a GUI input for the text/target words
+
 ###########
 
 
@@ -18,11 +21,7 @@ with open('textAnalysis/textInput.txt','r') as file:
 
 # clean the data
 # remove 'filler' words
-skippables = []
-with open('textAnalysis/fillerWords.txt','r') as file:
-    for line in file:
-        skippables.append(line)
-
+skippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 'of', 'as', 'with', 'such', 'etc', 'are', 'is', 'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 'we', 'you', 'they', 'and/or']
 punctuation = ['.',',','!','?',':']
 def trimAndSplitSentence(sentence):
     newSentence = ''
@@ -47,15 +46,22 @@ for sentence in sentences:
     for word in newSentence:
         if word in skippables:
             continue
-            # print('testing filler:', word)
         elif word in uniqueWordList.keys():
             uniqueWordList[word] += 1
-            # print('testing match:', word)
         else:
             # create new entry
             uniqueWordList[word] = 1
-            # print('testing unique:', word)
 
 
-print(uniqueWordList)
+######################## NEW CODE BELOW
 
+def dictionarySortingDisplay(dictionary):
+
+    # sort dictionary in descending frequency
+    sortedDictionary = sorted(dictionary.items(), key=lambda item: item[1], reverse=True)
+
+
+    return sortedDictionary
+
+# print(uniqueWordList) 
+print('\n\nsorted:',dictionarySortingDisplay(uniqueWordList)) 
