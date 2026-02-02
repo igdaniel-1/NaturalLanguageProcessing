@@ -1,22 +1,46 @@
-from skippables import skippables
+# text reader handler 
+# import text to be analysed in textInput.py or use existing testerCorpus.py
+# filter out skippable words using either of 2 filters. 
+# Either fillerWords.txt or skippables.py depending on how you prefer to enter input.
+# Configure which files 
 
+
+###### STEP 1: INPUT YOUR TEXT
 # open the textInput file and read its contents
 sentences = []
 
-# tester corpus
+### OPTION 1: tester corpus
 with open('textAnalysis/testerCorpus.txt','r') as file:
     for line in file:
         sentences.append(line)
 
-# active corpus
-# THIS IS WHERE INPUT SHOUL BE FED
+### OPTION 2: custom corpus
+# THIS IS WHERE TEXT TO BE ANALYSED SHOULD BE INPUTTED
 # with open('textAnalysis/textInput.txt','r') as file:
 #     for line in file:
 #         sentences.append(line)
 
+
+###### STEP 2: PICK YOUR FILTER
+### OPTION 1: import from skippables.py
+# from skippables import skippables
+
+### OPTION 2: import from fillerWords.txt
+## NOTE: add one blank line at the end of the file to handle my indexing
+skippables = []
+with open('textAnalysis/fillerWords.txt','r') as file:
+    for line in file:
+        skippables.append(line[:-1])
+
+print('skippables:',skippables)
+
+
+
+
+
 ###########
 # targetWords = []
-# these could be words you want to analyze the text for
+# these could be words you want to analyse the text for
 # they could be tools from your resume you're looking for in a job listing 
 # anazlyze the text tfor these words and return their data on top of the other words
 # i can also make a 'lite' mode that only anazlyses the frequency of the targetWords and 'ignores' the rest of the text
@@ -75,4 +99,8 @@ def dictionarySortingDisplay(dictionary):
     return sortedDictionary
 
 # print(uniqueWordList) 
-print('\n\nsorted:',dictionarySortingDisplay(uniqueWordList)) 
+# print('\n\nsorted:',dictionarySortingDisplay(uniqueWordList)) 
+
+# just the keys of the unique words
+justKeys = uniqueWordList.keys()
+print('\n\njustKeys:::', justKeys)
