@@ -1,9 +1,109 @@
-skippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 
+basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 
               'of', 'as', 'with', 'such', 'etc', 'are', 'is', 
               'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 
               'we', 'you', 'they', 'and/or',
               'A', 'An', 'The', 'In', 'At', 'On', 'Or', 'And', 
               'Of', 'As', 'With', 'Such', 'Etc', 'Are', 'Is', 
               'Was', 'May', 'Be', 'Maybe', 'To', 'From', 'Along', 
-              'We', 'You', 'They', 'AND/OR'
+              'We', 'You', 'They', 'AND/OR',
+              'least', 'Least', 'what', 'What', 'which','Which',
+              'us', 'Us','must','Must', 'only','Only',
+              'including','Including', 'addition', 'Addition',
+              'similar','Similar','for', 'For','by', 'By', 
+              'who', 'Who', 'where','Where','when','When','why','Why',
+              'this','This','that','That','low','Low','high','High',
+              'lower','Lower','higher','Higher','lowest','highest',
               ]
+
+skippablesPlusCommonResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 
+              'of', 'as', 'with', 'such', 'etc', 'are', 'is', 
+              'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 
+              'we', 'you', 'they', 'and/or',
+              'A', 'An', 'The', 'In', 'At', 'On', 'Or', 'And', 
+              'Of', 'As', 'With', 'Such', 'Etc', 'Are', 'Is', 
+              'Was', 'May', 'Be', 'Maybe', 'To', 'From', 'Along', 
+              'We', 'You', 'They', 'AND/OR',
+              'least', 'Least', 'what', 'What', 'which','Which',
+              'us', 'Us','must','Must', 'only','Only',
+              'including','Including','addition', 'Addition',
+              'similar','Similar', 'for', 'For', 'by', 'By', 
+              'who', 'Who', 'where','Where','when','When','why','Why',
+              'this','This','that','That','low','Low','high','High',
+              'lower','Lower','higher','Higher','lowest','highest',
+
+
+    'require','Require', 'requirements','Requirements', 
+    'requirement','Requirement', 'skills','Skills', 'skill','Skill',
+    'related', 'Related','discipline','Discipline', 
+    'years', 'Years','proven','Proven', 'experience','Experience',
+    'expertise','Expertise', 'current','Current', 'recent','Recent',
+    'U.S.', 'level', 'Level', 'models','Models','proficiency','Proficiency',
+    'strong','Strong','technologies','Technologies','detail','Detail',
+    'best', 'practices','Best', 'Practices','modern','Modern',
+    'understanding','Understanding','understand','Understand',
+    'accept', 'Accept','conditional','Conditional', 'offer', 'Offer',
+    'employment','Employment', 'subject','Subject',
+    'interest','Interest', 'position','Position',
+    'new','New','emerging','Emerging','existing','Existing'
+    'familiarity','Familiarity', 'ability','Ability',
+    'trends','Trends','functional','Functional', 'attention','Attention',
+    'requires','Requires','require','Require','required','Required',
+    'applicants','Applicants','access','Access,'
+    'customer','Customer', 'obtain', 'Obtain', 'information','Information',
+    'issue','Issue', 'Issues','issues','working','Working', 
+    'build','Build', 'builds','Builds', 'meet','Meet',
+    'eligibility','Eligibility',
+]
+
+skippablesCommonAndTechResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 
+              'of', 'as', 'with', 'such', 'etc', 'are', 'is', 
+              'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 
+              'we', 'you', 'they', 'and/or',
+              'A', 'An', 'The', 'In', 'At', 'On', 'Or', 'And', 
+              'Of', 'As', 'With', 'Such', 'Etc', 'Are', 'Is', 
+              'Was', 'May', 'Be', 'Maybe', 'To', 'From', 'Along', 
+              'We', 'You', 'They', 'AND/OR',
+              'least', 'Least', 'what', 'What', 'which','Which',
+              'us', 'Us','must','Must', 'only','Only',
+              'including','Including','addition', 'Addition',
+              'similar','Similar', 'for', 'For', 'by', 'By', 
+              'who', 'Who', 'where','Where','when','When','why','Why',
+              'this','This','that','That','low','Low','high','High',
+              'lower','Lower','higher','Higher','lowest','highest',
+
+
+    'require','Require', 'requirements','Requirements', 
+    'requirement','Requirement', 'skills','Skills', 'skill','Skill',
+    'related', 'Related','discipline','Discipline', 
+    'years', 'Years','proven','Proven', 'experience','Experience',
+    'expertise','Expertise', 'current','Current', 'recent','Recent',
+    'U.S.', 'level', 'Level', 'models','Models','proficiency','Proficiency',
+    'strong','Strong','technologies','Technologies','detail','Detail',
+    'best', 'practices','Best', 'Practices','modern','Modern',
+    'understanding','Understanding','understand','Understand',
+    'accept', 'Accept','conditional','Conditional', 'offer', 'Offer',
+    'employment','Employment', 'subject','Subject',
+    'interest','Interest', 'position','Position',
+    'new','New','emerging','Emerging','existing','Existing'
+    'familiarity','Familiarity', 'ability','Ability',
+    'trends','Trends','functional','Functional', 'attention','Attention',
+    'requires','Requires','require','Require','required','Required',
+    'applicants','Applicants','access','Access,'
+    'customer','Customer', 'obtain', 'Obtain', 'information','Information',
+    'issue','Issue', 'Issues','issues','working','Working', 
+    'build','Build', 'builds','Builds','meet','Meet',
+    'eligibility','Eligibility',
+
+
+    'analyze','Analyze','analyse','Analyse','develop', 'Develop',
+    'development','Development','programming','Programming',
+    'technical','Technical','innovation','Innovation',
+    'application','Application','applications','Applications',
+    'design','Design','engineer','Engineer', 'Computer','computer',
+    'programming','Programming',
+
+
+
+
+
+]

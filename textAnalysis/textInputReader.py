@@ -22,17 +22,21 @@ with open('textAnalysis/testerCorpus.txt','r') as file:
 
 
 ###### STEP 2: PICK YOUR FILTER
-### OPTION 1: import from skippables.py
-# from skippables import skippables
+### OPTION 1: import choice of filter(s) from skippables.py
+# from skippables import basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords
+from skippables import skippablesCommonAndTechResumeWords
+# print('commonResumeWords:',skippablesPlusCommonResumeWords)
+chosenLibrary = skippablesCommonAndTechResumeWords
 
 ### OPTION 2: import from fillerWords.txt
 ## NOTE: add one blank line at the end of the file to handle my indexing
-skippables = []
-with open('textAnalysis/fillerWords.txt','r') as file:
-    for line in file:
-        skippables.append(line[:-1])
+# skippables = []
+# with open('textAnalysis/fillerWords.txt','r') as file:
+#     for line in file:
+#         skippables.append(line[:-1])
+# chosenLibrary = skippables
 
-print('skippables:',skippables)
+
 
 
 
@@ -79,7 +83,9 @@ for sentence in sentences:
     newSentence = trimAndSplitSentence(sentence)
     # remove filler words
     for word in newSentence:
-        if word in skippables:
+        # NOTE: TO CHANGE FILTER USED FROM 'skippables.py', CHANGE 'skippables' TO 'library name, e.g.skippablesPlusCommonResumeWords'
+        # if word in skippables:
+        if word in chosenLibrary:
             continue
         elif word in uniqueWordList.keys():
             uniqueWordList[word] += 1
@@ -90,17 +96,29 @@ for sentence in sentences:
 
 ######################## NEW CODE BELOW
 
-def dictionarySortingDisplay(dictionary):
-
+def dictionaryReverseSort(dictionary):
     # sort dictionary in descending frequency
     sortedDictionary = sorted(dictionary.items(), key=lambda item: item[1], reverse=True)
-
-
     return sortedDictionary
 
-# print(uniqueWordList) 
-# print('\n\nsorted:',dictionarySortingDisplay(uniqueWordList)) 
+def prettySort(sortedDict):
+    # pretty print the dictionary with row numbers and frequencies
+    row_number = 1
+    for key,value in sortedDict:
+        if len(key) < 4:
+            print(row_number,key, '\t\t\t------', value)
+        elif len(key) > 11:
+            print(row_number,key, '\t------', value)
+        else:
+            print(row_number,key, '\t\t------', value)
+        row_number+=1
 
-# just the keys of the unique words
-justKeys = uniqueWordList.keys()
-print('\n\njustKeys:::', justKeys)
+# PRINT OUT THE WORD LIST WITH THEIR FREQUENCIES
+# print(uniqueWordList) 
+# print('\n\nsorted:',dictionaryReverseSort(uniqueWordList)) 
+# dictionaryReverseSort(uniqueWordList)
+prettySort(dictionaryReverseSort(uniqueWordList))
+
+# print just the keys of the unique words
+# justKeys = uniqueWordList.keys()
+# print('\n\njustKeys:::', justKeys)
