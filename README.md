@@ -5,7 +5,19 @@ A light-weight NLP program to analyze the content of a job description for key w
 1. Input
 Enter input text in: 'textAnalysis/textInput.txt'
 
-2. Run
+2. Filter
+Pick which 'skippable-words' filter you would like. In 'skippables.py', select which of the filter lists you would like to remove from your results, e.g. 'basicSkippables'. 
+
+In textInputReader.py, navigate to the line that begins with:
+
+```from skippables import <chosen library, e.g. 'basicSkippables'>```
+
+3. (Optional) Search By Target Words
+In textInputReady.py, change the targetWords list variabel to include your key words.
+
+At the bottom of the same file, uncomment out the two lines under printing functionality 'OPTION 4' to return frequency of target words in the inputted text.
+
+4. Run
 Execute 'textAnalysis/textInputReader.py'
 
 ## Additional Usage 
