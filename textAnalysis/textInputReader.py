@@ -25,10 +25,10 @@ with open('textAnalysis/testerCorpus.txt','r') as file:
 
 ###### STEP 2: PICK YOUR FILTER
 ### OPTION 1: import choice of filter(s) from skippables.py
-# from skippables import basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords
-from skippables import skippablesCommonAndTechResumeWords
+# from skippables import basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords
+from skippables import skippablesTechAndGovtResumeWords
 # print('commonResumeWords:',skippablesPlusCommonResumeWords)
-chosenLibrary = skippablesCommonAndTechResumeWords
+chosenLibrary = skippablesTechAndGovtResumeWords
 
 ### OPTION 2: import from fillerWords.txt
 ## NOTE: add one blank line at the end of the file to handle my indexing
@@ -86,7 +86,8 @@ for sentence in sentences:
     # remove filler words
     for word in newSentence:
         # remove any punctuation at the end of the word
-
+        if word[-1] in punctuation:
+            word = word[:-1]
 
         # NOTE: TO CHANGE FILTER USED FROM 'skippables.py', CHANGE 'skippables' TO 'library name, e.g.skippablesPlusCommonResumeWords'
         # if word in skippables:
@@ -119,6 +120,7 @@ def prettySort(sortedDict):
         row_number+=1
 
 def printTopTenSkills(sortedDict):
+    print('\n### TOP TEN HIGHEST FREQUENCY MATCHES: ')
     count = 0
     for key,value in sortedDict:
         if count > 9: break
@@ -126,12 +128,13 @@ def printTopTenSkills(sortedDict):
         count+=1
 
 
-# PRINT OUT THE WORD LIST WITH THEIR FREQUENCIES
-# print(uniqueWordList) 
-# print('\n\nsorted:',dictionaryReverseSort(uniqueWordList)) 
-# prettySort(dictionaryReverseSort(uniqueWordList))
-printTopTenSkills(dictionaryReverseSort(uniqueWordList))
+###### THESE ARE THE MAIN 3 PRINTING FUNCTIONALITIES
+### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
+prettySort(dictionaryReverseSort(uniqueWordList))
 
-# print just the keys of the unique words
+### OPTION 2: TOP TEN UNIQUE KEYS
+# printTopTenSkills(dictionaryReverseSort(uniqueWordList))
+
+## OPTION 3: PRINT JUST THE UNIQUE WORDS IN A LIST  
 # justKeys = uniqueWordList.keys()
-# print('\n\njustKeys:::', justKeys)
+# print('\nJust the keys:', justKeys)
