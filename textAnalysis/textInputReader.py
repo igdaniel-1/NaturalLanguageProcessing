@@ -21,6 +21,8 @@ with open('textAnalysis/testerCorpus.txt','r') as file:
 #         sentences.append(line)
 
 
+
+
 ###### STEP 2: PICK YOUR FILTER
 ### OPTION 1: import choice of filter(s) from skippables.py
 # from skippables import basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords
@@ -83,6 +85,9 @@ for sentence in sentences:
     newSentence = trimAndSplitSentence(sentence)
     # remove filler words
     for word in newSentence:
+        # remove any punctuation at the end of the word
+
+
         # NOTE: TO CHANGE FILTER USED FROM 'skippables.py', CHANGE 'skippables' TO 'library name, e.g.skippablesPlusCommonResumeWords'
         # if word in skippables:
         if word in chosenLibrary:
@@ -113,11 +118,19 @@ def prettySort(sortedDict):
             print(row_number,key, '\t\t------', value)
         row_number+=1
 
+def printTopTenSkills(sortedDict):
+    count = 0
+    for key,value in sortedDict:
+        if count > 9: break
+        print(key)
+        count+=1
+
+
 # PRINT OUT THE WORD LIST WITH THEIR FREQUENCIES
 # print(uniqueWordList) 
 # print('\n\nsorted:',dictionaryReverseSort(uniqueWordList)) 
-# dictionaryReverseSort(uniqueWordList)
-prettySort(dictionaryReverseSort(uniqueWordList))
+# prettySort(dictionaryReverseSort(uniqueWordList))
+printTopTenSkills(dictionaryReverseSort(uniqueWordList))
 
 # print just the keys of the unique words
 # justKeys = uniqueWordList.keys()

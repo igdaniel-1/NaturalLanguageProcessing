@@ -13,6 +13,7 @@ basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and',
               'who', 'Who', 'where','Where','when','When','why','Why',
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
+              '1','2','3','4','5','6','7','8','9',
               ]
 
 skippablesPlusCommonResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 
@@ -30,6 +31,7 @@ skippablesPlusCommonResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'an
               'who', 'Who', 'where','Where','when','When','why','Why',
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
+              '1','2','3','4','5','6','7','8','9',
 
 
     'require','Require', 'requirements','Requirements', 
@@ -70,6 +72,7 @@ skippablesCommonAndTechResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 
               'who', 'Who', 'where','Where','when','When','why','Why',
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
+              '1','2','3','4','5','6','7','8','9',
 
 
     'require','Require', 'requirements','Requirements', 
@@ -100,7 +103,9 @@ skippablesCommonAndTechResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 
     'technical','Technical','innovation','Innovation',
     'application','Application','applications','Applications',
     'design','Design','engineer','Engineer', 'Computer','computer',
-    'programming','Programming',
+    'programming','Programming', 'BS', 'B.S.', 'software', 'Software',
+    'engineer', 'Engineer', 'engineering', 'Engineering',
+    'science', 'Science',
 
 
 
