@@ -45,14 +45,25 @@ chosenLibrary = skippablesTechAndGovtResumeWords
 
 
 ###########
-# targetWords = []
+###### STEP 3 (Optional): CHOOSE YOUR TARGET SEARCH WORDS
+# uncomment out the line below and input target words in the list 'targetWords'
+targetWords = ['issued','security']
+
+def searchForTargetWords(dictionary):
+    print('WORD','\t','FREQUENCY')
+    for word in targetWords:
+        if word in dictionary:
+            if len(word) >7:
+                print(word, '\t',dictionary[word])
+            else:
+                print(word, '\t\t',dictionary[word])
+
+# NOTES FROM DEV:
 # these could be words you want to analyse the text for
 # they could be tools from your resume you're looking for in a job listing 
 # anazlyze the text tfor these words and return their data on top of the other words
 # i can also make a 'lite' mode that only anazlyses the frequency of the targetWords and 'ignores' the rest of the text
-
 # I could also make a GUI input for the text/target words
-
 ###########
 
 
@@ -120,7 +131,6 @@ def prettySort(sortedDict):
         row_number+=1
 
 def printTopTenSkills(sortedDict):
-    print('\n### TOP TEN HIGHEST FREQUENCY MATCHES: ')
     count = 0
     for key,value in sortedDict:
         if count > 9: break
@@ -128,13 +138,20 @@ def printTopTenSkills(sortedDict):
         count+=1
 
 
-###### THESE ARE THE MAIN 3 PRINTING FUNCTIONALITIES
+###### THESE ARE THE MAIN PRINTING FUNCTIONALITIES
 ### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
+print('##### FULL LIST OF UNIQUE KEY WORDS, FREQUENCY #####')
 prettySort(dictionaryReverseSort(uniqueWordList))
 
 ### OPTION 2: TOP TEN UNIQUE KEYS
+# print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
 # printTopTenSkills(dictionaryReverseSort(uniqueWordList))
 
 ## OPTION 3: PRINT JUST THE UNIQUE WORDS IN A LIST  
 # justKeys = uniqueWordList.keys()
-# print('\nJust the keys:', justKeys)
+# print('##### JUST THE UNIQUE TERMS DISPLAY #####')
+# print(justKeys)
+
+## OPTION 4: REPORT PRESENCE OF TARGET WORDS
+# print('##### TARGET WORD DISPLAY #####')
+# searchForTargetWords(uniqueWordList)
