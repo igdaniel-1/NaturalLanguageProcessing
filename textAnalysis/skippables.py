@@ -14,6 +14,7 @@ basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and',
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
+              'our','Our', 'been','Been', 'also','Also'
               ]
 
 skippablesPlusCommonResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 
@@ -32,6 +33,7 @@ skippablesPlusCommonResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'an
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
+              'our','Our', 'been','Been', 'also','Also'
 
 
     'require','Require', 'requirements','Requirements', 
@@ -73,6 +75,7 @@ skippablesCommonAndTechResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
+              'our','Our', 'been','Been', 'also','Also'
 
 
     'require','Require', 'requirements','Requirements', 
@@ -130,6 +133,7 @@ skippablesTechAndGovtResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'a
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
+              'our','Our', 'been','Been', 'also','Also'
 
 
     'require','Require', 'requirements','Requirements', 

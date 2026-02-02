@@ -10,15 +10,15 @@
 sentences = []
 
 ### OPTION 1: tester corpus
-with open('textAnalysis/testerCorpus.txt','r') as file:
-    for line in file:
-        sentences.append(line)
+# with open('textAnalysis/testerCorpus.txt','r') as file:
+#     for line in file:
+#         sentences.append(line)
 
 ### OPTION 2: custom corpus
 # THIS IS WHERE TEXT TO BE ANALYSED SHOULD BE INPUTTED
-# with open('textAnalysis/textInput.txt','r') as file:
-#     for line in file:
-#         sentences.append(line)
+with open('textAnalysis/textInput.txt','r') as file:
+    for line in file:
+        sentences.append(line)
 
 
 
@@ -26,9 +26,9 @@ with open('textAnalysis/testerCorpus.txt','r') as file:
 ###### STEP 2: PICK YOUR FILTER
 ### OPTION 1: import choice of filter(s) from skippables.py
 # from skippables import basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords
-from skippables import skippablesTechAndGovtResumeWords
+from skippables import skippablesPlusCommonResumeWords
 # print('commonResumeWords:',skippablesPlusCommonResumeWords)
-chosenLibrary = skippablesTechAndGovtResumeWords
+chosenLibrary = skippablesPlusCommonResumeWords
 
 ### OPTION 2: import from fillerWords.txt
 ## NOTE: add one blank line at the end of the file to handle my indexing
@@ -140,12 +140,12 @@ def printTopTenSkills(sortedDict):
 
 ###### THESE ARE THE MAIN PRINTING FUNCTIONALITIES
 ### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
-print('##### FULL LIST OF UNIQUE KEY WORDS, FREQUENCY #####')
-prettySort(dictionaryReverseSort(uniqueWordList))
+# print('##### FULL LIST OF UNIQUE KEY WORDS, FREQUENCY #####')
+# prettySort(dictionaryReverseSort(uniqueWordList))
 
 ### OPTION 2: TOP TEN UNIQUE KEYS
-# print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
-# printTopTenSkills(dictionaryReverseSort(uniqueWordList))
+print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
+printTopTenSkills(dictionaryReverseSort(uniqueWordList))
 
 ## OPTION 3: PRINT JUST THE UNIQUE WORDS IN A LIST  
 # justKeys = uniqueWordList.keys()
