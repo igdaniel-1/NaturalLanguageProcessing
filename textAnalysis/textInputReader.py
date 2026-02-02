@@ -2,15 +2,15 @@
 sentences = []
 
 # tester corpus
-# with open('textAnalysis/testerCorpus.txt','r') as file:
-#     for line in file:
-#         sentences.append(line)
+with open('textAnalysis/testerCorpus.txt','r') as file:
+    for line in file:
+        sentences.append(line)
 
 # active corpus
 # THIS IS WHERE INPUT SHOUL BE FED
-with open('textAnalysis/textInput.txt','r') as file:
-    for line in file:
-        sentences.append(line)
+# with open('textAnalysis/textInput.txt','r') as file:
+#     for line in file:
+#         sentences.append(line)
 
 ###########
 # targetWords = []
@@ -46,7 +46,12 @@ uniqueWordList = {}
 # Store all words in a dictionary 
 # count unique instances of words and note the total qunatity of each
 for sentence in sentences:
+    # this is to resolve an error when a line from the input is blank 
+    if sentence == '\n':
+        # print('\nempty sentence:::',sentence)
+        continue
     # trim the ends
+    # print('\nsentence:::',sentence)
     newSentence = trimAndSplitSentence(sentence)
     # remove filler words
     for word in newSentence:
