@@ -1,6 +1,13 @@
 # open the textInput file and read its contents
 sentences = []
 
+# tester corpus
+# with open('textAnalysis/testerCorpus.txt','r') as file:
+#     for line in file:
+#         sentences.append(line)
+
+# active corpus
+# THIS IS WHERE INPUT SHOUL BE FED
 with open('textAnalysis/textInput.txt','r') as file:
     for line in file:
         sentences.append(line)
@@ -22,7 +29,7 @@ with open('textAnalysis/textInput.txt','r') as file:
 # clean the data
 # remove 'filler' words
 skippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 'of', 'as', 'with', 'such', 'etc', 'are', 'is', 'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 'we', 'you', 'they', 'and/or']
-punctuation = ['.',',','!','?',':']
+punctuation = ['.',',','!','?',':', '-']
 def trimAndSplitSentence(sentence):
     newSentence = ''
     # remove the trailing blank spaces at the end of a string
@@ -41,7 +48,6 @@ uniqueWordList = {}
 for sentence in sentences:
     # trim the ends
     newSentence = trimAndSplitSentence(sentence)
-    print('newSentence',newSentence)
     # remove filler words
     for word in newSentence:
         if word in skippables:
