@@ -1,3 +1,5 @@
+from skippables import skippables
+
 # open the textInput file and read its contents
 sentences = []
 
@@ -28,7 +30,7 @@ with open('textAnalysis/testerCorpus.txt','r') as file:
 
 # clean the data
 # remove 'filler' words
-skippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 'of', 'as', 'with', 'such', 'etc', 'are', 'is', 'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 'we', 'you', 'they', 'and/or']
+# skippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 'of', 'as', 'with', 'such', 'etc', 'are', 'is', 'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 'we', 'you', 'they', 'and/or']
 punctuation = ['.',',','!','?',':', '-']
 def trimAndSplitSentence(sentence):
     newSentence = ''
@@ -48,10 +50,8 @@ uniqueWordList = {}
 for sentence in sentences:
     # this is to resolve an error when a line from the input is blank 
     if sentence == '\n':
-        # print('\nempty sentence:::',sentence)
         continue
     # trim the ends
-    # print('\nsentence:::',sentence)
     newSentence = trimAndSplitSentence(sentence)
     # remove filler words
     for word in newSentence:
