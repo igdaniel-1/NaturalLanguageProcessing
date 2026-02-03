@@ -8,7 +8,7 @@ def col_print(lines, term_width=None, indent=0, pad=2, columnCount=0):
     if n_lines == 0:
         return
 
-    # added 14 to width for wide tab effect
+    # added width for wider tab effect
     if columnCount > 4:
         col_width = max(len(line) for line in lines) 
     else:

@@ -31,7 +31,6 @@ with open('textAnalysis/textInput.txt','r') as file:
 ### OPTION 1: import choice of filter(s) from skippables.py
 # from skippables import basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords
 from skippables import skippablesTechAndGovtResumeWords
-# print('commonResumeWords:',skippablesPlusCommonResumeWords)
 chosenLibrary = skippablesTechAndGovtResumeWords
 
 ### OPTION 2: import from fillerWords.txt
@@ -170,8 +169,8 @@ def printTopThirtySkills(sortedDict):
 
 ###### THESE ARE THE MAIN PRINTING FUNCTIONALITIES
 ### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
-# print('##### FULL LIST OF UNIQUE KEY WORDS, FREQUENCY #####')
-# prettySort(dictionaryReverseSort(uniqueWordList))
+print('##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
+prettySort(dictionaryReverseSort(uniqueWordList))
 
 ### OPTION 2: TOP TEN UNIQUE KEYS
 # print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
@@ -186,6 +185,6 @@ def printTopThirtySkills(sortedDict):
 # searchForTargetWords(uniqueWordList)
 
 ### OPTION 5: TOP 30 UNIQUE KEYS
-print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
-print('(Ordered by freq. starting TopLeft, going Up->Down, then Left->Right)')
-printTopThirtySkills(uniqueWordList)
+# print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
+# print('(Ordered by freq. starting TopLeft, going Up->Down, then Left->Right)')
+# printTopThirtySkills(uniqueWordList)
