@@ -9,7 +9,10 @@ def col_print(lines, term_width=None, indent=0, pad=2, columnCount=0):
         return
 
     # added 14 to width for wide tab effect
-    col_width = max(len(line) for line in lines) + 14
+    if columnCount > 4:
+        col_width = max(len(line) for line in lines) 
+    else:
+        col_width = max(len(line) for line in lines) + 6
 
     n_cols = columnCount
 
@@ -24,5 +27,6 @@ def col_print(lines, term_width=None, indent=0, pad=2, columnCount=0):
     rows.extend(rows_missed)
 
     for row in rows:
-        # line below is changed from origianl for tuple indexing 'line[0]' instead of line
-        print(" " * indent + (" " * pad).join(line[0].ljust(col_width) for line in row))
+        # OLD: line below is changed from original for tuple indexing 'line[0]' instead of line
+        # NEW: reset to original context after modding textInputReader.py/plainListDisplay() to pass just dict keys to columnPrint/col_print()
+        print(" " * indent + (" " * pad).join(line.ljust(col_width) for line in row))

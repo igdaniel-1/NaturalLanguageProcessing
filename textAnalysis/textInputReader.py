@@ -122,6 +122,28 @@ def dictionaryReverseSort(dictionary):
     sortedDictionary = sorted(dictionary.items(), key=lambda item: item[1], reverse=True)
     return sortedDictionary
 
+def plainListDisplay(sortedDict):
+    plainList = []
+    for key,value in sortedDict:
+        plainList.append(key)
+    # choose column count for display
+    lengthList = len(plainList)
+    if lengthList < 30:
+        columnNumber = 4
+    elif lengthList< 140:
+        columnNumber = 5
+    elif lengthList< 180:
+        columnNumber = 6
+    elif lengthList< 220:
+        columnNumber = 7
+    elif lengthList< 240:
+        columnNumber = 8
+    else:
+        columnNumber = 9
+    col_print(plainList, columnCount=columnNumber)
+
+    
+
 def prettySort(sortedDict):
     # pretty print the dictionary with row numbers and frequencies
     row_number = 1
@@ -143,10 +165,7 @@ def printTopTenSkills(sortedDict):
 
 def printTopThirtySkills(sortedDict):
     reversedDict30 = dictionaryReverseSort(uniqueWordList)[:30]
-    # for i in range(30):
-    #     print(i, '\t', reversedDict[i-1])
-    #     i+=1
-    col_print(reversedDict30, columnCount=3)
+    plainListDisplay(reversedDict30)
 
 
 ###### THESE ARE THE MAIN PRINTING FUNCTIONALITIES
@@ -158,15 +177,15 @@ def printTopThirtySkills(sortedDict):
 # print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
 # printTopTenSkills(dictionaryReverseSort(uniqueWordList))
 
-## OPTION 3: PRINT JUST THE UNIQUE WORDS IN A LIST  
-# justKeys = uniqueWordList.keys()
-# print('##### JUST THE UNIQUE TERMS DISPLAY #####')
-# print(justKeys)
+### OPTION 3: PRINT JUST THE UNIQUE WORDS IN A LIST  
+print('##### JUST THE UNIQUE TERMS DISPLAY #####')
+plainListDisplay(dictionaryReverseSort(uniqueWordList))
 
-## OPTION 4: REPORT PRESENCE OF TARGET WORDS
+### OPTION 4: REPORT PRESENCE OF TARGET WORDS
 # print('##### TARGET WORD DISPLAY #####')
 # searchForTargetWords(uniqueWordList)
 
 ### OPTION 5: TOP 30 UNIQUE KEYS
-print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
-printTopThirtySkills(uniqueWordList)
+# print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
+# print('(Ordered by freq. starting TopLeft, going Up->Down, then Left->Right)')
+# printTopThirtySkills(uniqueWordList)
