@@ -1,4 +1,6 @@
 # Text Analysis Program
+Import text, filter out skippable words, and return word usage data.
+
 A light-weight NLP program to analyze the content of a job description for key words to include on your resume.
 
 ## Instructions
@@ -8,7 +10,7 @@ Enter input text in: 'textAnalysis/textInput.txt'
 
 2. Filter
 
-Pick which 'skippable-words' filter you would like. In 'skippables.py', select which of the filter lists you would like to remove from your results, e.g. 'basicSkippables'. 
+Pick which 'skippable-words' filter you would like. In 'skippables.py', select which of the filter lists you would like to remove from your results, e.g. 'skippablesPlusCommonResumeWords'. 
 
 In textInputReader.py, navigate to the line that begins with:
 
@@ -20,7 +22,11 @@ In textInputReader.py, navigate to the line that begins with:
 
 3. (Optional) Search By Target Words
 
-In 'textInputReader.py', change the 'targetWords' list to include your key words.
+In 'textInputReader.py', change the 'targetWords' list to include your key words. e.g.:
+
+```
+targetWords = ['software','developer']
+```
 
 At the bottom of 'textInputReader.py', uncomment-out the two lines under printing functionality 'OPTION 4: REPORT PRESENCE OF TARGET WORDS' to return frequency of target words in the inputted text.
 
