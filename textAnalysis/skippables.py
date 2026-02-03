@@ -14,7 +14,8 @@ basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and',
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
-              'our','Our', 'been','Been', 'also','Also'
+              'our','Our', 'been','Been', 'also','Also',
+              'make', 'Make','while', 'While',
               ]
 
 skippablesPlusCommonResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 
@@ -34,7 +35,7 @@ skippablesPlusCommonResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'an
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
               'our','Our', 'been','Been', 'also','Also',
-              'make', 'Make',
+              'make', 'Make','while', 'While',
 
 
     'require','Require', 'requirements','Requirements', 
@@ -76,8 +77,8 @@ skippablesCommonAndTechResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
-              'our','Our', 'been','Been', 'also','Also'
-              'make', 'Make',
+              'our','Our', 'been','Been', 'also','Also',
+              'make', 'Make','while', 'While',
 
 
     'require','Require', 'requirements','Requirements', 
@@ -111,6 +112,8 @@ skippablesCommonAndTechResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 
     'programming','Programming', 'BS', 'B.S.', 'software', 'Software',
     'engineer', 'Engineer', 'engineering', 'Engineering',
     'science', 'Science', 'customer','Customer', 'Value','value',
+    'code','Code','codes','Codes', 'work', 'Work', 
+    'functionality','Functionality',
 
 
 
@@ -135,8 +138,8 @@ skippablesTechAndGovtResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'a
               'this','This','that','That','low','Low','high','High',
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
-              'our','Our', 'been','Been', 'also','Also'
-              'make', 'Make',
+              'our','Our', 'been','Been', 'also','Also',
+              'make', 'Make', 'while', 'While',
 
 
     'require','Require', 'requirements','Requirements', 
@@ -170,6 +173,8 @@ skippablesTechAndGovtResumeWords = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'a
     'programming','Programming', 'BS', 'B.S.', 'software', 'Software',
     'engineer', 'Engineer', 'engineering', 'Engineering',
     'science', 'Science', 'customer','Customer', 'Value','value',
+    'code','Code','codes','Codes', 'work', 'Work', 
+    'functionality','Functionality',
 
 
     'Secret','secret', 'Government','government', 'citizens','Citizens',
