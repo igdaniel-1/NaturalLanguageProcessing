@@ -24,7 +24,20 @@ In 'textInputReader.py', change the 'targetWords' list to include your key words
 
 At the bottom of 'textInputReader.py', uncomment-out the two lines under printing functionality 'OPTION 4: REPORT PRESENCE OF TARGET WORDS' to return frequency of target words in the inputted text.
 
-4. Run
+4. Configure a Print Option
+At the bottom of 'textInputReader.py', navigate to where it reads "MAIN PRINTING FUNCTIONALITIES".
+Read the available options and uncomment-out those which you wish to see.
+
+For example, OPTION 1 is represented as:
+
+```
+### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
+print('##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
+prettySort(dictionaryReverseSort(uniqueWordList))
+```
+
+
+5. Run
 
 Execute 'textAnalysis/textInputReader.py'
 
