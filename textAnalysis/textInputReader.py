@@ -4,6 +4,9 @@
 # Either fillerWords.txt or skippables.py depending on how you prefer to enter input.
 # Configure which files 
 
+from columnPrint import col_print
+# import shutil
+
 
 ###### STEP 1: INPUT YOUR TEXT
 # open the textInput file and read its contents
@@ -18,6 +21,7 @@ sentences = []
 # THIS IS WHERE TEXT TO BE ANALYSED SHOULD BE INPUTTED
 with open('textAnalysis/textInput.txt','r') as file:
     for line in file:
+        # print('line:', line)
         sentences.append(line)
 
 
@@ -72,7 +76,7 @@ def searchForTargetWords(dictionary):
 # clean the data
 # remove 'filler' words
 # skippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 'of', 'as', 'with', 'such', 'etc', 'are', 'is', 'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 'we', 'you', 'they', 'and/or']
-punctuation = ['.',',','!','?',':', '-']
+punctuation = ['.',',','!','?',':', '-','"']
 def trimAndSplitSentence(sentence):
     newSentence = ''
     # remove the trailing blank spaces at the end of a string
@@ -137,6 +141,13 @@ def printTopTenSkills(sortedDict):
         print(key)
         count+=1
 
+def printTopThirtySkills(sortedDict):
+    reversedDict30 = dictionaryReverseSort(uniqueWordList)[:30]
+    # for i in range(30):
+    #     print(i, '\t', reversedDict[i-1])
+    #     i+=1
+    col_print(reversedDict30, columnCount=3)
+
 
 ###### THESE ARE THE MAIN PRINTING FUNCTIONALITIES
 ### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
@@ -144,8 +155,8 @@ def printTopTenSkills(sortedDict):
 # prettySort(dictionaryReverseSort(uniqueWordList))
 
 ### OPTION 2: TOP TEN UNIQUE KEYS
-print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
-printTopTenSkills(dictionaryReverseSort(uniqueWordList))
+# print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
+# printTopTenSkills(dictionaryReverseSort(uniqueWordList))
 
 ## OPTION 3: PRINT JUST THE UNIQUE WORDS IN A LIST  
 # justKeys = uniqueWordList.keys()
@@ -155,3 +166,7 @@ printTopTenSkills(dictionaryReverseSort(uniqueWordList))
 ## OPTION 4: REPORT PRESENCE OF TARGET WORDS
 # print('##### TARGET WORD DISPLAY #####')
 # searchForTargetWords(uniqueWordList)
+
+### OPTION 5: TOP 30 UNIQUE KEYS
+print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
+printTopThirtySkills(uniqueWordList)
