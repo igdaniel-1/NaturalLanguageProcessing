@@ -1,4 +1,10 @@
-basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', 
+# These are filter options 
+# Each option builds upon the basic filtr to provide more narrow results when searcing for keywords in a particular field
+# For example, when searching for keywords for avaition roles,
+# ... one could filter out 'skippablesAviationWords' to remove tose terms from the top results
+# ... and instead focus on role-specific skills that differ from the industry stanard
+
+basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', '&',
               'of', 'as', 'with', 'such', 'etc', 'are', 'is', 
               'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 
               'we', 'you', 'they', 'and/or',
@@ -15,7 +21,8 @@ basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and',
               'lower','Lower','higher','Higher','lowest','highest',
               '1','2','3','4','5','6','7','8','9',
               'our','Our', 'been','Been', 'also','Also',
-              'make', 'Make','while', 'While',
+              'make', 'Make','while', 'While','all', 'All',
+              'not', 'Not', 'any', 'Any', 'other', 'Other',
               ]
 
 skippablesPlusCommonResumeWords = basicSkippables + ['require','Require', 'requirements','Requirements', 
@@ -33,12 +40,24 @@ skippablesPlusCommonResumeWords = basicSkippables + ['require','Require', 'requi
     'new','New','emerging','Emerging','existing','Existing'
     'familiarity','Familiarity', 'ability','Ability',
     'trends','Trends','functional','Functional', 'attention','Attention',
+    'function','Function','functions','Functions',
     'requires','Requires','require','Require','required','Required',
-    'applicants','Applicants','access','Access,'
-    'customer','Customer', 'obtain', 'Obtain', 'information','Information',
+    'applicants','ApplicSants','access','Access,'
+    'customer','Customer', 'customers','Customers','obtain', 'Obtain', 'information','Information',
     'issue','Issue', 'Issues','issues','working','Working', 
     'build','Build', 'builds','Builds', 'meet','Meet',
-    'eligibility','Eligibility',
+    'eligibility','Eligibility','solution','Solution','solutions','Solutions',
+    'individual', 'individuals','Individual', 'Individuals',
+    'Requirements','Requirement', 'requirements','requirements',
+    'having','Having', 'has','had', 'shall','Shall','should','Should','company', 'Company', 'enterprise','Enterprise',
+    'employees','Employees','employee','Employee','employer','Employer',
+    'succeed','Succeed','success','Success',
+    'helping','Helping','help','Help','helps','Helps',
+    'focus','Focus','focuses','Focuses','focusing','Focusing',
+    'eligible','Eligible','eligibility','Eligibility',
+    'able','Able','ability','Ability',
+    'choice','Choice','choices','Choices',
+
 ]
 
 skippablesCommonAndTechResumeWords = skippablesPlusCommonResumeWords + ['analyze','Analyze',
@@ -49,9 +68,12 @@ skippablesCommonAndTechResumeWords = skippablesPlusCommonResumeWords + ['analyze
     'design','Design','engineer','Engineer', 'Computer','computer',
     'programming','Programming', 'BS', 'B.S.', 'software', 'Software',
     'engineer', 'Engineer', 'engineering', 'Engineering',
-    'science', 'Science', 'customer','Customer', 'Value','value',
+    'science', 'Science', 'customer','Customer', 'Value','value','Values','values',
     'code','Code','codes','Codes', 'work', 'Work', 
-    'functionality','Functionality',
+    'functionality','Functionality','enhancements','enhancement', 'feature', 'features',
+    'Enhancements','Enhancement', 'Feature', 'Features',
+    'performance','Performance','digitally','Digitally',
+    'efficiency','Efficiency',
 ]
 
 
@@ -59,6 +81,21 @@ skippablesTechAndGovtResumeWords = skippablesCommonAndTechResumeWords + ['Secret
     'Government','government', 'citizens','Citizens',
     'granted','Granted','grant','Grant','classified','Classified',
     'investigation','Investigation','investigations','Investigations',
-    'clearance','clearances','Clearances','Clearance'
+    'clearance','clearances','Clearances','Clearance', 'Security', 'security',
+    'defense', 'Defense', 'mission', 'Mission', 'critical', 'Critical', 
+    'safe', 'Safe', 'professional', 'Professional','DoD', 
+    'divulge', 'Divulge','divulges', 'Divulges','divulged', 'Divulged',
+    'systems','system','Systems','System','maintaining','Maintaining',
+    'maintainance','Maintainance','maintain','Maintain',
+    'legacy','Legacy','readiness','Readiness', 'reliability','Reliability',
+    'safety','Safety','safe','Safe',
+    'ensuring','Ensuring','ensure','Ensure','civil','Civil'
 ]
 
+
+skippablesAviationWords = skippablesTechAndGovtResumeWords + ['aviation', 'Aviation', 
+    'military', 'Military', 'flight','Flight','flights','Flights',
+    'pilot','pilots','Pilot','Pilots','piloting','Piloting',
+    'mission','Mission','missions','Missions',
+    
+    ]

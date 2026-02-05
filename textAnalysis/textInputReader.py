@@ -27,9 +27,9 @@ with open('textAnalysis/textInput.txt','r') as file:
 
 ################## STEP 2: PICK YOUR FILTER ##################
 ### OPTION 1: import choice of filter(s) from skippables.py
-# from skippables import basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords
-from skippables import skippablesTechAndGovtResumeWords
-chosenLibrary = skippablesTechAndGovtResumeWords
+# options include: basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords, skippablesAviationWords
+from skippables import *
+chosenLibrary = skippablesAviationWords
 
 ### OPTION 2: import from fillerWords.txt
 ## NOTE: add one blank line at the end of the file to handle my indexing
@@ -47,8 +47,14 @@ chosenLibrary = skippablesTechAndGovtResumeWords
 
 
 ################## STEP 3 (Optional): CHOOSE YOUR TARGET SEARCH WORDS ##################
+# ADDITIONAL TARGET WORD FILTER OPTIONS
+aerospaceTargetWords = ['simulator', 'simulators', 'Python','C','training','train']
+
+
 # add words to the str list 'targetWords'
-targetWords = ['issue','posting']
+# targetWords = ['issue','posting']
+targetWords = aerospaceTargetWords
+
 #########################################################################################
 
 
@@ -74,8 +80,8 @@ storeWords(sentences, chosenLibrary, uniqueWordList, punctuation)
 # plainListDisplay(dictionaryReverseSort(uniqueWordList))
 
 ### OPTION 4: REPORT PRESENCE OF TARGET WORDS
-# print('##### TARGET WORD DISPLAY #####')
-# searchForTargetWords(uniqueWordList, targetWords)
+print('##### TARGET WORD DISPLAY #####')
+searchForTargetWords(uniqueWordList, targetWords)
 
 ### OPTION 5: TOP 30 UNIQUE KEYS
 print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')

@@ -54,3 +54,7 @@ Use the 'targetWords' list that has been commented-out in the textInputReader.py
 
 Ideas:
 These target words can be your current job skills (if you're seeking a job tailored to your exact skillset), or you could analyze the frequency with which a certain tool is used to measure its potential industry value if you learned it.
+
+
+### Training Data
+The model is made more precise with the filters located in 'skippables.py'. To refine the model for your own use, consider adding a new filter or ammending mine for your needs.
