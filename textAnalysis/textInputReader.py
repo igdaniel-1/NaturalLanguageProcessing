@@ -11,30 +11,29 @@ uniqueWordList = {}
 
 ################## STEP 1: INPUT YOUR TEXT ##################
 ### OPTION 1: tester corpus
-# with open('textAnalysis/testerCorpus.txt','r') as file:
+# with open('textAnalysis/corpora/testerCorpus.txt','r') as file:
 #     for line in file:
 #         sentences.append(line)
 
 ### OPTION 2: custom corpus
 # THIS IS WHERE TEXT TO BE ANALYSED SHOULD BE INPUTTED
-with open('textAnalysis/textInput.txt','r') as file:
+with open('textAnalysis/corpora/textInput.txt','r') as file:
     for line in file:
-        # print('line:', line)
         sentences.append(line)
 #################################################################
 
 
 
 ################## STEP 2: PICK YOUR FILTER ##################
-### OPTION 1: import choice of filter(s) from skippables.py
+### OPTION 1: import choice of filter(s) from corpora/skippables.py
 # options include: basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords, skippablesAviationWords
-from skippables import *
+from corpora.skippables import *
 chosenLibrary = skippablesAviationWords
 
 ### OPTION 2: import from fillerWords.txt
 ## NOTE: add one blank line at the end of the file to handle my indexing
 # skippables = []
-# with open('textAnalysis/fillerWords.txt','r') as file:
+# with open('textAnalysis/corpora/fillerWords.txt','r') as file:
 #     for line in file:
 #         skippables.append(line[:-1])
 # chosenLibrary = skippables

@@ -1,0 +1,42 @@
+Who We Are: 
+
+CAE Vision: Our vision is to be the worldwide partner of choice in defense and security, and civil aviation by revolutionizing our customers’ training and critical operations with digitally immersive solutions to elevate safety, efficiency and readiness. 
+CAE Defense & Security Mission: CAE's Defense and Security business unit focuses on helping prepare military customers to develop and maintain the highest levels of mission readiness. 
+CAE Values: Empowerment, Innovation, Excellence, Integrity and OneCAE make us who we are and we strive to make a difference in the world while helping each other succeed. 
+What We Have to Offer: 
+
+Comprehensive and competitive benefits package and flexibility that promotes work-life balance 
+A work environment where all employees are valued, respected and safe 
+Freedom to succeed by enabling team members to deliver, take initiatives and make decisions 
+Recognition, professional development, advancement and having fun! 
+Essential Duties and Responsibilities  
+
+Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions.  
+
+Develop and maintain software for flight and mission simulators, ensuring reliability and performance to train pilots for safe mission outcomes. 
+Work on legacy code bases critical to simulator functionality, driving modernization through enhancements, and new features while ensuring maintenance, optimization, and stability. 
+Integrate new technologies, such as virtual reality (VR), with existing legacy systems to enhance training capabilities while preserving functionality. 
+Collaborate with cross-functional teams to integrate software with hardware, ensuring seamless operation for real-time, mission-critical applications. 
+Contribute to projects using both Waterfall and Agile/Scrum methodologies, adapting to structured development cycles or iterative sprints as needed. 
+Write and maintain clean, efficient code in languages like C, C++, Python, or C#, with a focus on real-time systems and simulator performance. 
+Participate in code reviews, sprint planning, and cross-functional brainstorming to drive innovation within a disciplined development process. 
+Troubleshoot and resolve complex issues in legacy and real-time systems, ensuring simulators meet the highest standards for pilot training. 
+Make a global impact by building software that empowers pilots and defense personnel to train effectively and return safely from their missions. 
+Qualifications and Education Requirements  
+
+Bachelor’s degree in Computer Science, Software Engineering, or a related field (or equivalent experience). 
+8+ years of professional experience in software engineering, with a focus on developing and maintaining mission-critical, or real-time systems. 
+Strong problem-solving skills and a passion for ensuring software reliability in high-stakes training environments. 
+Proficiency in C++, C, or Python, with experience maintaining legacy code bases or working on real-time/embedded systems. 
+Must be able to obtain and maintain an active DoD Secret or higher clearance prior to the start of employment. 
+Must be able to obtain and maintain Special Program Access. 
+Flexibility to support occasional overtime, weekend work, shift work and site travel (CONUS) 
+Due to U.S. Government contract requirements, only U.S. citizens are eligible for this role.  
+Security Responsibilities  
+
+Must comply with all company security and data protection / usage policies and procedures.  Personally responsible for proper marking and handling of all information and materials, in any form. Shall not divulge any information, or afford access, to other employees not having a need-to-know. Shall not divulge information outside company without management approval.  All government and proprietary information will be accessed and stored electronically on company provided resources.   
+
+ Incumbent must be eligible for DoD Personal Security Clearance.  
+Salary Range: $118,300 - 138,000
+
+Please note: The actual compensation rate is subject to the evaluation of the following factors (but not limited to): the candidate's work experience, qualifications, skills, internal equity, and market

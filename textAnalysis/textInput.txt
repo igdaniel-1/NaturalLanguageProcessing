@@ -1,9 +1,0 @@
-Develop and maintain software for flight and mission simulators, ensuring reliability and performance to train pilots for safe mission outcomes. 
-Work on legacy code bases critical to simulator functionality, driving modernization through enhancements, and new features while ensuring maintenance, optimization, and stability. 
-Integrate new technologies, such as virtual reality (VR), with existing legacy systems to enhance training capabilities while preserving functionality. 
-Collaborate with cross-functional teams to integrate software with hardware, ensuring seamless operation for real-time, mission-critical applications. 
-Contribute to projects using both Waterfall and Agile/Scrum methodologies, adapting to structured development cycles or iterative sprints as needed. 
-Write and maintain clean, efficient code in languages like C, C++, Python, or C#, with a focus on real-time systems and simulator performance. 
-Participate in code reviews, sprint planning, and cross-functional brainstorming to drive innovation within a disciplined development process. 
-Troubleshoot and resolve complex issues in legacy and real-time systems, ensuring simulators meet the highest standards for pilot training. 
-Make a global impact by building software that empowers pilots and defense personnel to train effectively and return safely from their missions. 
