@@ -23,6 +23,7 @@ basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', '&',
               'our','Our', 'been','Been', 'also','Also',
               'make', 'Make','while', 'While','all', 'All',
               'not', 'Not', 'any', 'Any', 'other', 'Other',
+              'will','Will'
               ]
 
 skippablesPlusCommonResumeWords = basicSkippables + ['require','Require', 'requirements','Requirements', 
@@ -57,6 +58,16 @@ skippablesPlusCommonResumeWords = basicSkippables + ['require','Require', 'requi
     'eligible','Eligible','eligibility','Eligibility',
     'able','Able','ability','Ability',
     'choice','Choice','choices','Choices',
+    'join','Join','providing','Providing',
+    'add','Add','adds','Adds','techniques','Techniques',
+    'tool','Tool','tools','Tools',
+    'location','Location','locations','Locations',
+    'capability','Capability','capabilities','Capabilities',
+    'improve','Improve','improves','Improves','improvement','Improvement',
+    'enhance', 'Enhance','enhances', 'Enhances','enhancement','Enhancement',
+    'looking','Looking','look','Look','looks''Looks',
+    'provide','Provide','provides','Provides',
+    'enable','Enable','enables','Enables',
 
 ]
 
@@ -65,7 +76,7 @@ skippablesCommonAndTechResumeWords = skippablesPlusCommonResumeWords + ['analyze
     'development','Development','programming','Programming',
     'technical','Technical','innovation','Innovation',
     'application','Application','applications','Applications',
-    'design','Design','engineer','Engineer', 'Computer','computer',
+    'design','Design','engineer','Engineer', 'Computer','computer','computers','Computers',
     'programming','Programming', 'BS', 'B.S.', 'software', 'Software',
     'engineer', 'Engineer', 'engineering', 'Engineering',
     'science', 'Science', 'customer','Customer', 'Value','value','Values','values',
@@ -73,7 +84,9 @@ skippablesCommonAndTechResumeWords = skippablesPlusCommonResumeWords + ['analyze
     'functionality','Functionality','enhancements','enhancement', 'feature', 'features',
     'Enhancements','Enhancement', 'Feature', 'Features',
     'performance','Performance','digitally','Digitally',
-    'efficiency','Efficiency',
+    'efficiency','Efficiency','advanced','Advanced','data','Data',
+    'technology','Technology','dynamic','Dynamic',
+    'computing','Computing'
 ]
 
 
@@ -89,7 +102,7 @@ skippablesTechAndGovtResumeWords = skippablesCommonAndTechResumeWords + ['Secret
     'maintainance','Maintainance','maintain','Maintain',
     'legacy','Legacy','readiness','Readiness', 'reliability','Reliability',
     'safety','Safety','safe','Safe',
-    'ensuring','Ensuring','ensure','Ensure','civil','Civil'
+    'ensuring','Ensuring','ensure','Ensure','civil','Civil','United','States'
 ]
 
 

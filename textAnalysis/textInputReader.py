@@ -28,7 +28,7 @@ with open('textAnalysis/corpora/textInput.txt','r') as file:
 ### OPTION 1: import choice of filter(s) from corpora/skippables.py
 # options include: basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords, skippablesAviationWords
 from corpora.skippables import *
-chosenLibrary = skippablesAviationWords
+chosenLibrary = skippablesTechAndGovtResumeWords
 
 ### OPTION 2: import from fillerWords.txt
 ## NOTE: add one blank line at the end of the file to handle my indexing
@@ -47,7 +47,7 @@ chosenLibrary = skippablesAviationWords
 
 ################## STEP 3 (Optional): CHOOSE YOUR TARGET SEARCH WORDS ##################
 # ADDITIONAL TARGET WORD FILTER OPTIONS
-aerospaceTargetWords = ['simulator', 'simulators', 'Python','C','training','train']
+aerospaceTargetWords = ['simulation','simulator', 'simulators', 'modeling','Python','C','training','train','team']
 
 
 # add words to the str list 'targetWords'
