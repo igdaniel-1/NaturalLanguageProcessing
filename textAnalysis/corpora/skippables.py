@@ -7,7 +7,7 @@
 basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', '&',
               'of', 'as', 'with', 'such', 'etc', 'are', 'is', 
               'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 
-              'we', 'you', 'they', 'and/or',
+              'we', 'you', 'they', 'and/or','I',
               'A', 'An', 'The', 'In', 'At', 'On', 'Or', 'And', 
               'Of', 'As', 'With', 'Such', 'Etc', 'Are', 'Is', 
               'Was', 'May', 'Be', 'Maybe', 'To', 'From', 'Along', 
@@ -23,12 +23,14 @@ basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', '&',
               'our','Our', 'been','Been', 'also','Also',
               'make', 'Make','while', 'While','all', 'All',
               'not', 'Not', 'any', 'Any', 'other', 'Other',
-              'will','Will'
+              'will','Will','using','Using','use','Use','uses','Uses', 
+              'used', 'Used','through', 'Through','though','Though','during','During'
               ]
 
 skippablesPlusCommonResumeWords = basicSkippables + ['require','Require', 'requirements','Requirements', 
-    'requirement','Requirement', 'skills','Skills', 'skill','Skill',
-    'related', 'Related','discipline','Discipline', 
+    'requirement','Requirement', 'skills','Skills', 'skill','Skill','paid','Paid',
+    'need','Need','needs','Needs','apply','Apply','know','Know','well','Well',
+    'related', 'Related','discipline','Discipline', 'range','Range',
     'years', 'Years','proven','Proven', 'experience','Experience',
     'expertise','Expertise', 'current','Current', 'recent','Recent',
     'U.S.', 'level', 'Level', 'models','Models','proficiency','Proficiency',
@@ -50,7 +52,7 @@ skippablesPlusCommonResumeWords = basicSkippables + ['require','Require', 'requi
     'eligibility','Eligibility','solution','Solution','solutions','Solutions',
     'individual', 'individuals','Individual', 'Individuals',
     'Requirements','Requirement', 'requirements','requirements',
-    'having','Having', 'has','had', 'shall','Shall','should','Should','company', 'Company', 'enterprise','Enterprise',
+    'having','Having', 'has','had', 'have','shall','Shall','should','Should','company', 'Company', 'enterprise','Enterprise',
     'employees','Employees','employee','Employee','employer','Employer',
     'succeed','Succeed','success','Success',
     'helping','Helping','help','Help','helps','Helps',
@@ -67,7 +69,8 @@ skippablesPlusCommonResumeWords = basicSkippables + ['require','Require', 'requi
     'enhance', 'Enhance','enhances', 'Enhances','enhancement','Enhancement',
     'looking','Looking','look','Look','looks''Looks',
     'provide','Provide','provides','Provides',
-    'enable','Enable','enables','Enables',
+    'enable','Enable','enables','Enables','role','roles','Role','Roles','based',
+    
 
 ]
 
