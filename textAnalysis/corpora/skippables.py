@@ -7,7 +7,7 @@
 basicSkippables = ['a', 'an', 'the', 'in', 'at', 'on', 'or', 'and', '&',
               'of', 'as', 'with', 'such', 'etc', 'are', 'is', 
               'was', 'may', 'be', 'maybe', 'to', 'from', 'along', 
-              'we', 'you', 'they', 'and/or','I',
+              'we', 'you', 'they', 'and/or','I','it','It','its','Its',
               'A', 'An', 'The', 'In', 'At', 'On', 'Or', 'And', 
               'Of', 'As', 'With', 'Such', 'Etc', 'Are', 'Is', 
               'Was', 'May', 'Be', 'Maybe', 'To', 'From', 'Along', 
@@ -70,6 +70,7 @@ skippablesPlusCommonResumeWords = basicSkippables + ['require','Require', 'requi
     'looking','Looking','look','Look','looks''Looks',
     'provide','Provide','provides','Provides',
     'enable','Enable','enables','Enables','role','roles','Role','Roles','based',
+    'strategy','Strategy','over','Over','under','Under',
     
 
 ]
@@ -80,7 +81,7 @@ skippablesCommonAndTechResumeWords = skippablesPlusCommonResumeWords + ['analyze
     'technical','Technical','innovation','Innovation',
     'application','Application','applications','Applications',
     'design','Design','engineer','Engineer', 'Computer','computer','computers','Computers',
-    'programming','Programming', 'BS', 'B.S.', 'software', 'Software',
+    'program','Program', 'BS', 'B.S.', 'software', 'Software',
     'engineer', 'Engineer', 'engineering', 'Engineering',
     'science', 'Science', 'customer','Customer', 'Value','value','Values','values',
     'code','Code','codes','Codes', 'work', 'Work', 
@@ -89,7 +90,7 @@ skippablesCommonAndTechResumeWords = skippablesPlusCommonResumeWords + ['analyze
     'performance','Performance','digitally','Digitally',
     'efficiency','Efficiency','advanced','Advanced','data','Data',
     'technology','Technology','dynamic','Dynamic',
-    'computing','Computing'
+    'computing','Computing','execution','Execution',
 ]
 
 
