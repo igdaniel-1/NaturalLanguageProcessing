@@ -1,9 +1,22 @@
-# Text Analysis Program
-Import text, filter out skippable words, and return word usage data.
+# AI Language Assistant
 
-A light-weight NLP program to analyze the content of a job description for key words to include on your resume.
+Finds industry-specific keywords in a document.
 
-## Instructions
+Filters can be applied to return highlighted keywords from a specific category, sifting out industry jargon and returning targetted insights on word usage data.
+
+
+## Usage - Resume / Job Description Matcher
+You can check how qualified you are for a job using this tool. 
+
+This was designed as a hiring tool, ingesting a text to return featured topics. This can be applied to job descriptions as well as resumes. 
+
+Using the "Execution Instructions" below, a keyword list can be generated for both the job description and a resume. By cross-referencing the list of keywords in the job description with that of the resume, one can see if the resume experience is a match for the job posting.
+
+This tool can be used by recruiters and applicants alike to match people to their dream jobs!
+
+
+
+## Execution Instructions
 1. Input
 
 Enter input text in: 'textAnalysis/textInput.txt'
@@ -45,15 +58,9 @@ prettySort(dictionaryReverseSort(uniqueWordList))
 
 5. Run
 
-Execute 'textAnalysis/textInputReader.py'
-
-## Additional Usage 
-Search description for keywords:
-
-Use the 'targetWords' list that has been commented-out in the textInputReader.py file. Enter your target words in 'targetWords' matching the syntax of the 'skippables' list in 'textAnalysis/skippables.py'. 
-
-Ideas:
-These target words can be your current job skills (if you're seeking a job tailored to your exact skillset), or you could analyze the frequency with which a certain tool is used to measure its potential industry value if you learned it.
+```
+python3 'textAnalysis/textInputReader.py'
+```
 
 
 ### Training Data
