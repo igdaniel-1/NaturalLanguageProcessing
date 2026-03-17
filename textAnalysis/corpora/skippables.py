@@ -110,7 +110,7 @@ skippablesTechAndGovtResumeWords = skippablesCommonAndTechResumeWords + ['Secret
 ]
 
 
-skippablesAviationWords = skippablesTechAndGovtResumeWords + ['aviation', 'Aviation', 
+skippablesAerospaceWords = skippablesTechAndGovtResumeWords + ['aviation', 'Aviation', 
     'military', 'Military', 'flight','Flight','flights','Flights',
     'pilot','pilots','Pilot','Pilots','piloting','Piloting',
     'mission','Mission','missions','Missions',

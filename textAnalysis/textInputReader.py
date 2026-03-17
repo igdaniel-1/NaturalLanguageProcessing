@@ -26,9 +26,9 @@ with open('textAnalysis/corpora/textInput.txt','r') as file:
 
 ################## STEP 2: PICK YOUR FILTER ##################
 ### OPTION 1: import choice of filter(s) from corpora/skippables.py
-# options include: basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords, skippablesAviationWords
+# options include: basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords, skippablesAerospaceWords
 from corpora.skippables import *
-chosenLibrary = skippablesTechAndGovtResumeWords
+chosenLibrary = basicSkippables
 
 ### OPTION 2: import from fillerWords.txt
 ## NOTE: add one blank line at the end of the file to handle my indexing
@@ -47,12 +47,13 @@ chosenLibrary = skippablesTechAndGovtResumeWords
 
 ################## STEP 3 (Optional): CHOOSE YOUR TARGET SEARCH WORDS ##################
 # ADDITIONAL TARGET WORD FILTER OPTIONS
+# You can add more target word lists in this section, mirroring the list format for 'aerospaceTargetWords'
 aerospaceTargetWords = ['simulation','simulator', 'simulators', 'modeling','Python','C','training','train','team']
+defaultTargetWords = ['issue','posting']
 
-
-# add words to the str list 'targetWords'
-# targetWords = ['issue','posting']
-targetWords = aerospaceTargetWords
+# Add to the list of targetWords or choose a prebuilt list above
+targetWords = ['software','developer']
+# targetWords = defaultTargetWords
 
 #########################################################################################
 

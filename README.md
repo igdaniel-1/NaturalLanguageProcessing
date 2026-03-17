@@ -23,15 +23,28 @@ Enter input text in: 'textAnalysis/textInput.txt'
 
 2. Filter
 
-Pick which 'skippable-words' filter you would like. In 'skippables.py', select which of the filter lists you would like to remove from your results, e.g. 'skippablesPlusCommonResumeWords'. 
+What category you are searching for keywords in: DevOps? Financial Technology? Software Engineering? Aerospace?
 
-In textInputReader.py, navigate to the line that begins with:
+Determine which 'skippable-words' filter you would like. In the file 'textAnalysis/skippables.py', look at the list of filters to select the category of jargon you would like to remove from your results.
 
-```from skippables import ...```
+For example:
 
-...and substitute '...' with the list name from 'skippables.py'. e.g.:
+'skippablesAerospaceWords' for Aerospace
+'skippablesTechAndGovtResumeWords' for federal tech jobs.
 
-```from skippables import skippablesPlusCommonResumeWords```
+
+
+
+
+e.g. 'skippablesPlusCommonResumeWords'. 
+
+In textInputReader.py, navigate to the line:
+
+```chosenLibrary = basicSkippables```
+
+...and substitute 'basicSkippables' with the chosen filter name from 'skippables.py'. e.g.:
+
+```chosenLibrary = skippablesTechAndGovtResumeWords```
 
 3. (Optional) Search By Target Words
 
@@ -41,7 +54,9 @@ In 'textInputReader.py', change the 'targetWords' list to include your key words
 targetWords = ['software','developer']
 ```
 
-At the bottom of 'textInputReader.py', uncomment-out the two lines under printing functionality 'OPTION 4: REPORT PRESENCE OF TARGET WORDS' to return frequency of target words in the inputted text.
+OR select a prebuilt target word list such as 'defaultTargetWords' or 'aerospaceTargetWords'. 
+
+To return the frequency of target words, the TARGET WORD print option is selected by DEFAULT. This functionality can be customized to provide succinctly tailored print options.
 
 4. Configure a Print Option
 At the bottom of 'textInputReader.py', navigate to where it reads "MAIN PRINTING FUNCTIONALITIES".
@@ -54,6 +69,9 @@ For example, OPTION 1 is represented as:
 print('##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
 prettySort(dictionaryReverseSort(uniqueWordList))
 ```
+
+In order to remove the target word data read-out:
+At the bottom of 'textInputReader.py', comment-out the two lines under printing functionality 'OPTION 4: REPORT PRESENCE OF TARGET WORDS' to stop returning the frequency of target words in the inputted text.
 
 
 5. Run
