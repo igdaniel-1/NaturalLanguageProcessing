@@ -19,7 +19,7 @@ This tool can be used by recruiters and applicants alike to match people to thei
 ## Execution Instructions
 1. Input
 
-Enter input text in: 'textAnalysis/textInput.txt'
+Enter input text in: 'textAnalysis/corpora/textInput.txt'
 
 2. Filter
 
@@ -59,10 +59,10 @@ OR select a prebuilt target word list such as 'defaultTargetWords' or 'aerospace
 To return the frequency of target words, the TARGET WORD print option is selected by DEFAULT. This functionality can be customized to provide succinctly tailored print options.
 
 4. Configure a Print Option
-At the bottom of 'textInputReader.py', navigate to where it reads "MAIN PRINTING FUNCTIONALITIES".
-Read the available options and uncomment-out those which you wish to see.
 
-For example, OPTION 1 is represented as:
+At the bottom of 'textInputReader.py', navigate to where it reads "CONFIGURE A PRINT OPTION".
+
+Read the available options and uncomment-out those which you wish to see. For example, OPTION 1 is represented as:
 
 ```
 ### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
@@ -70,8 +70,13 @@ print('##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
 prettySort(dictionaryReverseSort(uniqueWordList))
 ```
 
-In order to remove the target word data read-out:
+This prints all unique keywords in the document, filtered with the optional chosen filter, and sorted by frequency of occurence with the most common on top.
+
+To remove the TARGET WORD data read-out:
+
 At the bottom of 'textInputReader.py', comment-out the two lines under printing functionality 'OPTION 4: REPORT PRESENCE OF TARGET WORDS' to stop returning the frequency of target words in the inputted text.
+
+Have fun experimenting with print styles! There's an elegant multi-column option in there as well!
 
 
 5. Run
