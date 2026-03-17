@@ -29,34 +29,32 @@ Determine which 'skippable-words' filter you would like. In the file 'textAnalys
 
 For example:
 
-'skippablesAerospaceWords' for Aerospace
-'skippablesTechAndGovtResumeWords' for federal tech jobs.
+'skippablesAerospaceWords' for Aerospace,
 
+'skippablesTechAndGovtResumeWords' for tech jobs in the government.
 
-
-
-
-e.g. 'skippablesPlusCommonResumeWords'. 
-
-In textInputReader.py, navigate to the line:
+To designate the filter you want to use, navigate to the line in 'textInputReader.py':
 
 ```chosenLibrary = basicSkippables```
 
-...and substitute 'basicSkippables' with the chosen filter name from 'skippables.py'. e.g.:
+...and substitute 'basicSkippables' with the chosen filter name from 'textAnalysis/skippables.py'. For example, the structure for govt tech jobs would be:
 
 ```chosenLibrary = skippablesTechAndGovtResumeWords```
 
 3. (Optional) Search By Target Words
 
-In 'textInputReader.py', change the 'targetWords' list to include your key words. e.g.:
+In addition to filtering out words, we can search for specific target words in a text. This can be useful to see if a candidate has a specific skill required by a job posting.
 
-```
-targetWords = ['software','developer']
-```
+In 'textInputReader.py', navigate to the 'targetWords' list variable under 'STEP 3 (Optional): CHOOSE YOUR TARGET SEARCH WORDS'.
 
-OR select a prebuilt target word list such as 'defaultTargetWords' or 'aerospaceTargetWords'. 
+```targetWords = ['software','developer']```
 
-To return the frequency of target words, the TARGET WORD print option is selected by DEFAULT. This functionality can be customized to provide succinctly tailored print options.
+Modify the list of targetWords to include your search criteria.
+You can also select a prebuilt target word list such as 'defaultTargetWords' or 'aerospaceTargetWords'. If you are using 'aerospaceTargetWords', for example, change the targetWords variable to:
+
+```targetWords = aerospaceTargetWords```
+
+The TARGET WORD print option is selected by DEFAULT. This functionality can be customized to provide succinct print options, as laid out below.
 
 4. Configure a Print Option
 
