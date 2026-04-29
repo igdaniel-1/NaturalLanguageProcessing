@@ -79,9 +79,22 @@ aerospaceTargetWords = ['simulation','simulator', 'simulators', 'modeling','Pyth
 defaultTargetWords = ['issue','posting']
 
 # Add to the list of targetWords or choose a prebuilt list above
-targetWords = ['software','developer']
+targetWords = []
+# targetWords = ['software','developer']
 # targetWords = defaultTargetWords
 
+# input version
+filterYesNo = input("\n(Optional) Would you like to select specific target words to filter for? (Y/N)")
+if filterYesNo == 'Y':
+    filterWordsInput = input("Enter the target words seperated by spaces: ")
+    print("Is this list correct? \n", filterWordsInput)
+    continueTargetYesNo = input("(Y/N): ")
+    if continueTargetYesNo == "N":
+        print("Restart and try again. Remember to seperate with spaces like the following example:")
+        print("Example: software developer Python JavaScript")
+    elif continueTargetYesNo == "Y":
+        targetWords = filterWordsInput.split()
+        
 #########################################################################################
 
 
@@ -102,19 +115,19 @@ print("OPTION 5: TOP 30 UNIQUE KEYS")
 printSelection = input("Selection (#):")
 
 if printSelection == "1":
-    print('##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
+    print('\n##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
     prettySort(dictionaryReverseSort(uniqueWordList))
 elif printSelection == "2":
-    print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
+    print('\n##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
     printTopTenSkills(dictionaryReverseSort(uniqueWordList))
 elif printSelection == "3":
-    print('##### JUST THE UNIQUE TERMS DISPLAY #####')
+    print('\n##### JUST THE UNIQUE TERMS DISPLAY #####')
     plainListDisplay(dictionaryReverseSort(uniqueWordList))
 elif printSelection == "4":
-    print('##### TARGET WORD DISPLAY #####')
+    print('\n##### TARGET WORD DISPLAY #####')
     searchForTargetWords(uniqueWordList, targetWords)
 elif printSelection == "5":
-    print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
+    print('\n##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
     print('(Ordered by freq. starting TopLeft, going Up->Down, then Left->Right)')
     printTopThirtySkills(uniqueWordList)
 else:
