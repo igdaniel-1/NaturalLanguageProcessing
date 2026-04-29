@@ -14,7 +14,7 @@ Using the "Execution Instructions" below, a keyword list can be generated for bo
 
 This tool can be used by recruiters and applicants alike to match people to their dream jobs!
 
-![](images/startupCommandLine.png)
+![](textAnalysis/images/startupCommandLine.png)
 
 ## Execution Instructions
 1. Input
@@ -43,7 +43,7 @@ To designate the filter you want to use, navigate to the line in 'textInputReade
 
 3. (Optional) Search By Target Words
 
-![](images/targetWordInput.png)
+![](textAnalysis/images/targetWordInput.png)
 
 In addition to filtering out words, we can search for specific target words in a text. This can be useful to see if a candidate has a specific skill required by a job posting.
 
@@ -60,7 +60,7 @@ The TARGET WORD print option is selected by DEFAULT. This functionality can be c
 
 4. Configure a Print Option
 
-![](images/printOptionInput.png)
+![](textAnalysis/images/printOptionInput.png)
 
 At the bottom of 'textInputReader.py', navigate to where it reads "CONFIGURE A PRINT OPTION".
 
