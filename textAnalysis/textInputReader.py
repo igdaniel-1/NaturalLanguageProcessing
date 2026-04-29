@@ -29,8 +29,19 @@ with open('textAnalysis/corpora/textInput.txt','r') as file:
 # options include: basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords, skippablesAerospaceWords
 from corpora.skippables import *
 
+# text input header
+print("\n\n\n\n\n#################################################################")
+print("\nJob Application Filter \n")
+print("#################################################################")
+print("\nFIRST TIME USERS: \n Before beginning, " \
+"locate the file corpora/textInput.txt." \
+"\n Paste text of the document in this file.\n")
+print("#################################################################\n \n")
+
+
+
 print("Which Filter would you like to apply to your document:")
-print("basic \n resume \n tech \n govt \n aerospace \n")
+print(" basic \n resume \n tech \n govt \n aerospace")
 filterChoice = input("Selection:")
 if filterChoice == 'basic':
     chosenLibrary = basicSkippables
@@ -82,25 +93,30 @@ storeWords(sentences, chosenLibrary, uniqueWordList, punctuation)
 
 
 ################## STEP 5: CONFIGURE A PRINT OPTION ##################
+print("\nSelect one of the following output print options:")
+print("OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES")
+print("OPTION 2: TOP TEN UNIQUE KEYS")
+print("OPTION 3: PRINT JUST THE UNIQUE WORDS IN A LIST")
+print("OPTION 4: REPORT PRESENCE OF TARGET WORDS")
+print("OPTION 5: TOP 30 UNIQUE KEYS")
+printSelection = input("Selection (#):")
 
-### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
-# print('##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
-# prettySort(dictionaryReverseSort(uniqueWordList))
-
-### OPTION 2: TOP TEN UNIQUE KEYS
-# print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
-# printTopTenSkills(dictionaryReverseSort(uniqueWordList))
-
-### OPTION 3: PRINT JUST THE UNIQUE WORDS IN A LIST  
-# print('##### JUST THE UNIQUE TERMS DISPLAY #####')
-# plainListDisplay(dictionaryReverseSort(uniqueWordList))
-
-### OPTION 4: REPORT PRESENCE OF TARGET WORDS
-print('##### TARGET WORD DISPLAY #####')
-searchForTargetWords(uniqueWordList, targetWords)
-
-### OPTION 5: TOP 30 UNIQUE KEYS
-print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
-print('(Ordered by freq. starting TopLeft, going Up->Down, then Left->Right)')
-printTopThirtySkills(uniqueWordList)
+if printSelection == "1":
+    print('##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
+    prettySort(dictionaryReverseSort(uniqueWordList))
+elif printSelection == "2":
+    print('##### TOP TEN HIGHEST FREQUENCY MATCHES #####')
+    printTopTenSkills(dictionaryReverseSort(uniqueWordList))
+elif printSelection == "3":
+    print('##### JUST THE UNIQUE TERMS DISPLAY #####')
+    plainListDisplay(dictionaryReverseSort(uniqueWordList))
+elif printSelection == "4":
+    print('##### TARGET WORD DISPLAY #####')
+    searchForTargetWords(uniqueWordList, targetWords)
+elif printSelection == "5":
+    print('##### TOP THIRTY HIGHEST FREQUENCY MATCHES #####')
+    print('(Ordered by freq. starting TopLeft, going Up->Down, then Left->Right)')
+    printTopThirtySkills(uniqueWordList)
+else:
+    print("Please input a number between 1 and 5.")
 ########################################################################
