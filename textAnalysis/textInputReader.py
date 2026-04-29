@@ -28,7 +28,23 @@ with open('textAnalysis/corpora/textInput.txt','r') as file:
 ### OPTION 1: import choice of filter(s) from corpora/skippables.py
 # options include: basicSkippables, skippablesPlusCommonResumeWords, skippablesCommonAndTechResumeWords, skippablesTechAndGovtResumeWords, skippablesAerospaceWords
 from corpora.skippables import *
-chosenLibrary = basicSkippables
+
+print("Which Filter would you like to apply to your document:")
+print("basic \n resume \n tech \n govt \n aerospace \n")
+filterChoice = input("Selection:")
+if filterChoice == 'basic':
+    chosenLibrary = basicSkippables
+if filterChoice == 'resume':
+    chosenLibrary = skippablesPlusCommonResumeWords
+if filterChoice == 'tech':
+    chosenLibrary = skippablesCommonAndTechResumeWords
+if filterChoice == 'govt':
+    chosenLibrary = skippablesTechAndGovtResumeWords
+if filterChoice == 'aerospace':
+    chosenLibrary = skippablesAerospaceWords
+else:
+    # default is basic
+    chosenLibrary = basicSkippables
 
 ### OPTION 2: import from fillerWords.txt
 ## NOTE: add one blank line at the end of the file to handle my indexing
