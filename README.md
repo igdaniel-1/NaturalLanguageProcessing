@@ -33,13 +33,6 @@ For example:
 
 'skippablesTechAndGovtResumeWords' for tech jobs in the government.
 
-To designate the filter you want to use, navigate to the line in 'textInputReader.py':
-
-```chosenLibrary = basicSkippables```
-
-...and substitute 'basicSkippables' with the chosen filter name from 'textAnalysis/skippables.py'. For example, the structure for govt tech jobs would be:
-
-```chosenLibrary = skippablesTechAndGovtResumeWords```
 
 3. (Optional) Search By Target Words
 
@@ -47,36 +40,16 @@ To designate the filter you want to use, navigate to the line in 'textInputReade
 
 In addition to filtering out words, we can search for specific target words in a text. This can be useful to see if a candidate has a specific skill required by a job posting.
 
-In 'textInputReader.py', navigate to the 'targetWords' list variable under 'STEP 3 (Optional): CHOOSE YOUR TARGET SEARCH WORDS'.
-
-```targetWords = ['software','developer']```
-
-Modify the list of targetWords to include your search criteria.
-You can also select a prebuilt target word list such as 'defaultTargetWords' or 'aerospaceTargetWords'. If you are using 'aerospaceTargetWords', for example, change the targetWords variable to:
+You can also select a prebuilt target word list such as 'defaultTargetWords' or 'aerospaceTargetWords'. In 'textInputReader.py', navigate to the 'targetWords' list variable under 'STEP 3 (Optional): CHOOSE YOUR TARGET SEARCH WORDS'.
+If you are using 'aerospaceTargetWords', for example, change the targetWords variable to:
 
 ```targetWords = aerospaceTargetWords```
 
-The TARGET WORD print option is selected by DEFAULT. This functionality can be customized to provide succinct print options, as laid out below.
+
 
 4. Configure a Print Option
 
 ![](textAnalysis/images/printOptionInput.png)
-
-At the bottom of 'textInputReader.py', navigate to where it reads "CONFIGURE A PRINT OPTION".
-
-Read the available options and uncomment-out those which you wish to see. For example, OPTION 1 is represented as:
-
-```
-### OPTION 1: ALL UNIQUE KEYS AND THEIR RESPECTIVE FREQUENCIES
-print('##### ALL UNIQUE KEY WORDS / FREQUENCY #####')
-prettySort(dictionaryReverseSort(uniqueWordList))
-```
-
-This prints all unique keywords in the document, filtered with the optional chosen filter, and sorted by frequency of occurence with the most common on top.
-
-To remove the TARGET WORD data read-out:
-
-At the bottom of 'textInputReader.py', comment-out the two lines under printing functionality 'OPTION 4: REPORT PRESENCE OF TARGET WORDS' to stop returning the frequency of target words in the inputted text.
 
 Have fun experimenting with print styles! There's an elegant multi-column option in there as well!
 
